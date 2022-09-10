@@ -5,29 +5,29 @@
 /**
  * main - Print the last digit of the number, the number, and also show if the last digit of n is greater 5, less than 6 or equal 0
  *
- * Return: Always 0.
+ * Return: Always 0 (Successful)
 */
 int main(void)
 {
 	int n;
+	char last[] = "Last digit of";
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	1 = n % 10;
-
-	if ((n % 10) > 5)
-	{ 
-		printf("Last digit of %d is %d and is greater than 5\n", n, n % 10);
-	}
-	else if ((n % 10) < 6 && (n % 10) ! = 0
-			{
-			printf("Last digit of %d is %d and is less than 6 and not  0\n", n, n % 10);
-			}
-	else 
+	printf("%s %d is %d and is ", last, n, n % 10);
+	if (n % 10 > 5)
 	{
-		printf("Last digit of %d is %d and is 0\n", n, n % 10);
+		printf("greater than 5\n");
 	}
-	return (0);
+	else if (n % 10 == 0)
+	{
+		printf("0\n");
+	}
+	else
+	{
+		printf("less than 6 aand not 0\n);
+	}
+	return(0);
 }
 
 
