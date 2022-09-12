@@ -10,30 +10,25 @@ int main(void)
 {
 	int i, p, n;
 
-	for (i = 0; i <= 9; i++)
-
+	for (i = 0; i < 8; i++)
 	{
-		for (p = 0; p <= 9; p++)
-
+		for (p = i + 1; p < 9; p++)
 		{
-			for (n = 0; n <= 9; n++)
+			for (n = p + 1; n < 10; n++)
 			{
-			for (n > p && p > i)
-			{
-				putchar(i + '0');
-				putchar(p + '0');
-				putchar(n + '0');
-				if (i != 7)
+				putchar((i % 10) + '0');
+				putchar((p % 10) + '0');
+				putchar((n % 10) + '0');
+				if (i == 7 && p == 8 && n == 9)
+					continue;
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			}
 		}
 	}
 	putchar('\n');
 	return (0);
-
 }
 
