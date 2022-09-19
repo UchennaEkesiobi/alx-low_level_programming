@@ -8,7 +8,7 @@
  * Description - prints a string
  * On success: Returns no error
  */
-void _puts(char *s)
+void _puts(char *str)
 {
 	int i = 0;
 
